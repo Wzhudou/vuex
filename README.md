@@ -72,6 +72,7 @@ state: {
 ```
 1、定义Action
     actions: {
+        // context 上下文对象。相当于组件中的this.$store的运行实例
         addAsync(context) {
             setTimeout(() => {
                 context.commit('add');
@@ -106,4 +107,15 @@ store中的数据发生变化，Getter的数据也会跟着变化
         computed: {
             ...mapGetters(['showNum']),
         }
+```
+
+### 7、modules
+```
+要获取子模块的状态，需要通过 
+    方式一： $store.state.子模块名称.属性名 来获取
+```
+
+### 8、namespaced
+```
+    
 ```
